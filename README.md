@@ -3,3 +3,6 @@
 ### how I did it?
 Esto es un proyecto de `web dinamica` realizada con `Java` usando `servlets` como controladores, `POJO´s` como modelos y `JSP` como vista.
 Usaré tambien HTML, CSS y JS.
+
+#### Thats the plan:
+https://trello.com/b/ZW2GKeGh/nubeagenda
