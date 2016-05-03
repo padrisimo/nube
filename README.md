@@ -6,6 +6,8 @@
 
 ### How am I doing it?
 
+This is a `Dynamic Web` proyect build over `Java`, using `servlets` as controllers, `Pojo` classes as model and `JSP` (and HTML) files as view. I gonna use css and js too.
+
 Esto es un proyecto de `web dinamica` realizada con `Java` usando `servlets` como controladores, `POJO´s` como modelos y `JSP` como vista.
 Usaré tambien HTML, CSS y JS.
 
@@ -18,3 +20,5 @@ https://trello.com/b/ZW2GKeGh/nubeagenda
 > UML
 
 ![UML](https://trello-attachments.s3.amazonaws.com/57224868c47069f567201b49/829x1167/c7319dc899dc9f1ac983454c681ec4b8/nuveagenda.png "uml")
+
+Let´s code some stuff.
