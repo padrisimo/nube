@@ -4,7 +4,7 @@
 ### How it is looks like? 
 ![boceto](https://trello-attachments.s3.amazonaws.com/57236eda420fc19f7d3bf563/723x975/495da834be32ed771aa68e5530e745dc/nube.jpg "boceto")
 
-### How do I doing this?
+### How am I doing it?
 
 Esto es un proyecto de `web dinamica` realizada con `Java` usando `servlets` como controladores, `POJO´s` como modelos y `JSP` como vista.
 Usaré tambien HTML, CSS y JS.
