@@ -2,7 +2,7 @@
 ¿What would happen if you lost ur phone and u need to call somebody right now? Probably u don´t remember any number in ur agenda, so save them in the nubeagenda.
 
 ### How it is looks like? 
-[boceto](https://trello-attachments.s3.amazonaws.com/57236eda420fc19f7d3bf563/723x975/495da834be32ed771aa68e5530e745dc/nube.jpg "boceto")
+![boceto](https://trello-attachments.s3.amazonaws.com/57236eda420fc19f7d3bf563/723x975/495da834be32ed771aa68e5530e745dc/nube.jpg "boceto")
 
 ### How do I doing this?
 
