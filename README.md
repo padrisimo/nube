@@ -6,9 +6,9 @@
 
 ### How am I doing it?
 
-This is a `Dynamic Web` proyect build over `Java`, using `servlets` as controllers, `Pojo` classes as model and `JSP` (and HTML) files as view. I gonna use css and js too.
+This is a `Dynamic Web` proyect build over `Java EE`, using `servlets` as controllers, `Pojo` classes as model and `JSP` (and HTML) files as view. I gonna use css and js too.
 
-Esto es un proyecto de `web dinamica` realizada con `Java` usando `servlets` como controladores, `POJO´s` como modelos y `JSP` como vista.
+Esto es un proyecto de `web dinamica` realizada con `Java EE` usando `servlets` como controladores, `POJO´s` como modelos y `JSP` como vista.
 Usaré tambien HTML, CSS y JS.
 
 
