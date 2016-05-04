@@ -4,6 +4,11 @@ body{
 	text-align: center;
 }
 
+.error {
+	margin-top: 1em;
+	text-align: center;
+}
+
 input{
 	padding: 10px;
 	border-radius: 8px;
@@ -128,5 +133,12 @@ footer a{
 
 		height:0px;
 		border: none;
+	}
+}
+
+/* para pantalla especial */
+@media (min-width: 601px) and (max-height: 827px){
+	footer{
+		display: none;
 	}
 }
