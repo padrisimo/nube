@@ -6,7 +6,7 @@ public class Usuario {
 	public int ID;
 	public String email;
 	public String password;
-	public List<Contacto> agenda;
+	public int[] agenda;
 	
 	public boolean logIn(){
 		return true;

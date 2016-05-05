@@ -1,6 +1,8 @@
 package com.nubeagenda.servlets;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,6 +21,7 @@ import com.nubeagenda.db.DBmock;
 @WebServlet("/agenda")
 public class agenda extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static Logger logger=Logger.getLogger("agenda");
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -36,11 +39,16 @@ public class agenda extends HttpServlet {
 		HttpSession session = request.getSession();
 		DBmock db = DBmock.getInstance();
 		
-    	int uid=Integer.parseInt( (String)session.getAttribute("uid") );
+    	int uid=((Integer)session.getAttribute("uid")).intValue();
     	Usuario currentUser = db.getuserbyID(uid);
+    	
+    	db.getContactosWithId(currentUser.agenda);
+    	
+    	logger.log(Level.INFO,currentUser.agenda!=null?currentUser.agenda.toString():"No hay agenda");
     	
 		RequestDispatcher rs = request.getRequestDispatcher("agenda.jsp");
         rs.include(request, response);
+        
 	}
 
 	/**

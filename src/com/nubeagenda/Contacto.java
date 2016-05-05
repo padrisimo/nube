@@ -1,6 +1,7 @@
 package com.nubeagenda;
 
 public class Contacto {
+	public int id;
 	public String nombre;
 	public int telefono;
 	

@@ -29,18 +29,61 @@ public class DBmock {
 
 	public void initializeData() {
 		if (this.listaUsuarios == null) {
-			this.listaUsuarios = new ArrayList<Usuario>();
-
-			Usuario tempUsuario = new Usuario();
-			tempUsuario.email = "pepito@mail.com";
-			tempUsuario.ID = 1;
-			tempUsuario.password = "admin";
-			tempUsuario.agenda=null;
-			// ...poner mas datos del contacto
-
-			listaUsuarios.add(tempUsuario);
-
+			
+			inicializeUsuarios();
+			inicializeContactos();
 		}
+	}
+	public void inicializeUsuarios(){
+		this.listaUsuarios = new ArrayList<Usuario>();
+
+		Usuario tempUsuario = new Usuario();
+		tempUsuario.ID = 1;
+		tempUsuario.email = "pepito@mail.com";
+		tempUsuario.password = "admin";
+		tempUsuario.agenda=new int[]{1,2};
+
+		listaUsuarios.add(tempUsuario);
+		
+		
+		
+		tempUsuario = new Usuario();
+		tempUsuario.ID = 2;
+		tempUsuario.email = "pepito2@mail.com";
+		tempUsuario.password = "admin";
+		tempUsuario.agenda=new int[]{3};
+
+		listaUsuarios.add(tempUsuario);
+		
+		
+	}
+	public void inicializeContactos(){
+		//inincializar la lista de contactos
+		this.listaContactos = new ArrayList<Contacto>();
+		
+		Contacto tempContacto = new Contacto();
+		tempContacto.id=1;
+		tempContacto.nombre = "Fulano de Tal";
+		tempContacto.telefono = 555777888;
+//		...
+		this.listaContactos.add(tempContacto);
+		
+		
+		tempContacto = new Contacto();
+		tempContacto.id=2;
+		tempContacto.nombre = "Padrisimo Coder";
+		tempContacto.telefono = 985008003;
+//		...
+		this.listaContactos.add(tempContacto);
+		
+		tempContacto = new Contacto();
+		tempContacto.id=3;
+		tempContacto.nombre = "Menganito de Cual";
+		tempContacto.telefono = 686868688;
+//		...
+		this.listaContactos.add(tempContacto);
+		
+		
 	}
 	
 	public int checarUsuario (String mail,String password){
@@ -64,6 +107,22 @@ public class DBmock {
 			}
 		}
 		
+		return null;
+	}
+	//Con esto ya tengo un metodo que me devuelve la lista de contactos
+	public Contacto[] getContactosWithId(int[] idsdecontacto){
+		List<Contacto> resultadoLista = new ArrayList<Contacto>();
+		for (int i = 0; i < idsdecontacto.length; i++) {
+			Contacto tempContacto = getContactosById( idsdecontacto[i] );
+			if( tempContacto!=null ) resultadoLista.add(tempContacto);
+		}
+		return (Contacto[]) resultadoLista.toArray();
+	}
+	
+	private Contacto getContactosById(int idcontacto){
+		for (int i = 0; i < listaContactos.size(); i++) {
+			if( listaContactos.get(i).id == idcontacto )return listaContactos.get(i);
+		}
 		return null;
 	}
 

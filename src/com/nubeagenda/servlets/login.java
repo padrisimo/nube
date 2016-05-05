@@ -54,10 +54,10 @@ public class login extends HttpServlet {
         DBmock db = DBmock.getInstance();
         db.initializeData();
         
-        int uid=db.checarUsuario(email, pass);
+        int uid = db.checarUsuario(email, pass);
         if ( uid >0 ){
         	HttpSession session = request.getSession();
-        	session.setAttribute("uid", uid);
+        	session.setAttribute("uid", new Integer(uid));
         	
         	RequestDispatcher rs = request.getRequestDispatcher("agenda");
             rs.include(request, response);
