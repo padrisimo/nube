@@ -21,7 +21,7 @@
 		
 		<form action="" method="POST">
 			<input type="text" placeholder="email" id="email" name="email">
-			<input type="text" id="password" name="password" placeholder="password">
+			<input type="password" id="password" name="password" placeholder="password">
 			<button>Log In</button>
 		</form>
 		<div class="error"><%=request.getAttribute("mssError")!=null?request.getAttribute("mssError"):"" %></div>
