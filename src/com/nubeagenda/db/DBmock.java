@@ -110,13 +110,13 @@ public class DBmock {
 		return null;
 	}
 	//Con esto ya tengo un metodo que me devuelve la lista de contactos
-	public Contacto[] getContactosWithId(int[] idsdecontacto){
+	public List<Contacto> getContactosWithId(int[] idsdecontacto){
 		List<Contacto> resultadoLista = new ArrayList<Contacto>();
 		for (int i = 0; i < idsdecontacto.length; i++) {
 			Contacto tempContacto = getContactosById( idsdecontacto[i] );
 			if( tempContacto!=null ) resultadoLista.add(tempContacto);
 		}
-		return (Contacto[]) resultadoLista.toArray();
+		return resultadoLista;
 	}
 	
 	private Contacto getContactosById(int idcontacto){

@@ -1,6 +1,7 @@
 package com.nubeagenda.servlets;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.nubeagenda.Contacto;
 import com.nubeagenda.Usuario;
 import com.nubeagenda.db.DBmock;
 
@@ -38,13 +40,15 @@ public class agenda extends HttpServlet {
 		// llegamos a agenda
 		HttpSession session = request.getSession();
 		DBmock db = DBmock.getInstance();
+		db.initializeData();
 		
     	int uid=((Integer)session.getAttribute("uid")).intValue();
     	Usuario currentUser = db.getuserbyID(uid);
     	
-    	db.getContactosWithId(currentUser.agenda);
+    	logger.log(Level.INFO,"Lista de usuarios obtenidos: "+currentUser.agenda!=null?currentUser.agenda.toString():"No hay agenda");
     	
-    	logger.log(Level.INFO,currentUser.agenda!=null?currentUser.agenda.toString():"No hay agenda");
+    	List<Contacto> miscontactos=db.getContactosWithId(currentUser.agenda);
+    	request.setAttribute("miscontactos", miscontactos);
     	
 		RequestDispatcher rs = request.getRequestDispatcher("agenda.jsp");
         rs.include(request, response);
