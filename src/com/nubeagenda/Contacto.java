@@ -4,7 +4,14 @@ public class Contacto {
 	public int id;
 	public String nombre;
 	public int telefono;
+	public int idUsuario;
 	
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
 	public Contacto crearNuevo(){
 		return new Contacto();
 	}
